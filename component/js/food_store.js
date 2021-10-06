@@ -1,104 +1,6 @@
-/*import { StatusBar } from "expo-status-bar";
-import React from "react";
-import Home from './component/js/home'
-import Food_store from './component/js/food_store'
-import Signup from './component/sign_up'
-*/
-
-//import {createStackNavigator} from 'react-navigation';
-/*import { 
-  createStackNavigator,
-  
-
-} from 'react-navigation-stack'
-
-*/
-
-/*
-import {
-  createStackNavigator,
-  createAppContainer
-} from 'react-navigation';
-
-const RootStack =createStackNavigator({
-  Home:Home,
-  Food_store:Food_store,
-  Signup:Signup,
-
-});
-
-const App = createAppContainer(RootStack);
-
-export default App;
-
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TextInput,
-  Button,
-  TouchableOpacity,
-
-} from "react-native";
-
-
-
-export default class App extends React.Component{
-
-  render(){
-
-      return <RootStack/>;
-  }
-}
-
-*/
-
-/*
-export default function App(){
-
-  return(
-    <RootStack/>
-
-  );
-
-}
-  */
-
-/*
-import { StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator,createAppContainer } from 'react-navigation';
-
-
-
-const RootStack = createStackNavigator(
-  {
-    Food_store: {
-      screen: Food_store
-    },
-    Signup: {
-      screen: Signup
-    }
-  },
-  {
-    initialRouteName: 'Home'
-  }
-
-);
-
-export class App extends React.Component {
-  render() {
-    return <RootStack />;
-  }
-}
-
-export default createAppContainer(RootStack);
-*/
-
-
-/*
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import Container from '../../ScreenContainer';
 import {
   StyleSheet,
   Text,
@@ -111,18 +13,111 @@ import {
 } from "react-native";
 
 
-function App(){
+
+function Food_store({navigation}){
 
     return(
 
+        
     <View style={styles.store_home}>
+
+
+<View style={styles.topics}> 
+
+        <View style={styles.first_topics}>
+         <Button
+            title="Home"
+            style={styles.go_button}
+            onPress={
+
+                () => navigation.navigate('Home')
+            }
+      
+           ></Button>
+        </View>
+
+        <View style={styles.first_topics}>
+            <Button
+              title="Food Store"
+              style={styles.  go_button}
+              onPress={
+
+                 () => navigation.navigate('Food_store')
+              }
+      
+            ></Button>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+            <Button
+              title="About us"
+              style={styles.  go_button}
+              onPress={
+
+                 () => navigation.navigate('About_us')
+              }
+      
+            ></Button>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+            <Button
+              title="Contact us"
+              style={styles.  go_button}
+              onPress={
+
+                 () => navigation.navigate('Contact_us')
+              }
+      
+            ></Button>
+
+        </View>
+
+        <View style={styles.first_topics}>
+            <Button
+              title="Sign Up"
+              style={styles.  go_button}
+              onPress={
+
+                 () => navigation.navigate('Signup')
+              }
+      
+            ></Button>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+            <Button
+              title="Login"
+              style={styles.go_button}
+              onPress={
+
+                 () => navigation.navigate('Login')
+              }
+      
+            ></Button>
+
+        </View>
+
+
+
+
+  </View>
+
+
+
     <center><h1>Order Now</h1></center>
 
     <center><h2>Rice</h2></center>
     <View style={styles.food_toipic}>
  
           <View style={styles.photo}> 
-          <Image style={styles.image_one} source={require("./assets/rice/biriyani.jpg")}></Image>
+          <Image style={styles.image_one} source={require("./../../assets/rice/biriyani.jpg")}></Image>
            
             <View style={styles.food_details}>
             <ul>
@@ -151,7 +146,7 @@ function App(){
 
           <View style={styles.photo}> 
 
-          <Image style={styles.image_one} source={require("./assets/rice/nasigurani.jpg")}></Image>
+          <Image style={styles.image_one} source={require("./../../assets/rice/nasigurani.jpg")}></Image>
             <View style={styles.food_details}>
             <ul>
               <li><b>Name: Nasigurani</b></li>
@@ -179,7 +174,7 @@ function App(){
 
         <View style={styles.photo}> 
 
-            <Image style={styles.image_one} source={require("./assets/rice/mixed_rice.png")}></Image>
+            <Image style={styles.image_one} source={require("./../../assets/rice/mixed_rice.png")}></Image>
             <View style={styles.food_details}>
             <ul>
               <li><b>Name: Mixed fride rice</b></li>
@@ -213,7 +208,7 @@ function App(){
     <View style={styles.food_toipic}>
  
           <View style={styles.photo}> 
-          <Image style={styles.image_one} source={require("./assets/rice/egg_rice.jpg")}></Image>
+          <Image style={styles.image_one} source={require("./../../assets/rice/egg_rice.jpg")}></Image>
            
             <View style={styles.food_details}>
             <ul>
@@ -242,7 +237,7 @@ function App(){
          
           <View style={styles.photo}> 
 
-          <Image style={styles.image_one} source={require("./assets/rice/sosejas.jpg")}></Image>
+          <Image style={styles.image_one} source={require("./../../assets/rice/sosejas.jpg")}></Image>
             <View style={styles.food_details}>
             <ul>
               <li><b>Name: Sosejas rice</b></li>
@@ -270,7 +265,7 @@ function App(){
 
         <View style={styles.photo}> 
 
-            <Image style={styles.image_one} source={require("./assets/rice/chiken_rice.jpg")}></Image>
+            <Image style={styles.image_one} source={require("./../../assets/rice/chiken_rice.jpg")}></Image>
             <View style={styles.food_details}>
             <ul>
               <li><b>Name: Chiken fride rice</b></li>
@@ -309,7 +304,7 @@ function App(){
 <View style={styles.food_toipic}>
 
     <View style={styles.photo}> 
-    <Image style={styles.image_one} source={require("./assets/noodles/egg_noodles.jpg")}></Image>
+    <Image style={styles.image_one} source={require("./../../assets/noodles/egg_noodles.jpg")}></Image>
      
       <View style={styles.food_details}>
       <ul>
@@ -339,7 +334,7 @@ function App(){
 
     <View style={styles.photo}> 
 
-    <Image style={styles.image_one} source={require("./assets/noodles/chiken.jpg")}></Image>
+    <Image style={styles.image_one} source={require("./../../assets/noodles/chiken.jpg")}></Image>
       <View style={styles.food_details}>
       <ul>
               <li><b>Name: Chiken nudles</b></li>
@@ -368,7 +363,7 @@ function App(){
 
   <View style={styles.photo}> 
 
-      <Image style={styles.image_one} source={require("./assets/noodles/vegitable.jpg")}></Image>
+      <Image style={styles.image_one} source={require("./../../assets/noodles/vegitable.jpg")}></Image>
       <View style={styles.food_details}>
       
       <ul>
@@ -406,7 +401,7 @@ function App(){
 <View style={styles.food_toipic}>
 
     <View style={styles.photo}> 
-    <Image style={styles.image_one} source={require("./assets/noodles/egg_pasta.jpg")}></Image>
+    <Image style={styles.image_one} source={require("./../../assets/noodles/egg_pasta.jpg")}></Image>
      
       <View style={styles.food_details}>
       <ul>
@@ -436,7 +431,7 @@ function App(){
 
     <View style={styles.photo}> 
 
-    <Image style={styles.image_one} source={require("./assets/noodles/pasta.jpg")}></Image>
+    <Image style={styles.image_one} source={require("./../../assets/noodles/pasta.jpg")}></Image>
       <View style={styles.food_details}>
       <ul>
               <li><b>Name:Chiken Pasta</b></li>
@@ -465,7 +460,7 @@ function App(){
 
   <View style={styles.photo}> 
 
-      <Image style={styles.image_one} source={require("./assets/noodles/chiken_chees_pasta.jpg")}></Image>
+      <Image style={styles.image_one} source={require("./../../assets/noodles/chiken_chees_pasta.jpg")}></Image>
       <View style={styles.food_details}>
       
       <ul>
@@ -504,7 +499,7 @@ function App(){
 <View style={styles.food_toipic}>
 
     <View style={styles.photo}> 
-    <Image style={styles.image_one} source={require("./assets/noodles/egg_koththu.jpg")}></Image>
+    <Image style={styles.image_one} source={require("./../../assets/noodles/egg_koththu.jpg")}></Image>
      
       <View style={styles.food_details}>
       <ul>
@@ -533,7 +528,7 @@ function App(){
 
     <View style={styles.photo}> 
 
-    <Image style={styles.image_one} source={require("./assets/noodles/koththu.jpg")}></Image>
+    <Image style={styles.image_one} source={require("./../../assets/noodles/koththu.jpg")}></Image>
       <View style={styles.food_details}>
       <ul>
               <li><b>Name:Chiken koththu</b></li>
@@ -562,7 +557,7 @@ function App(){
 
   <View style={styles.photo}> 
 
-      <Image style={styles.image_one} source={require("./assets/noodles/chees_koththu.jpg")}></Image>
+      <Image style={styles.image_one} source={require("./../../assets/noodles/chees_koththu.jpg")}></Image>
       <View style={styles.food_details}>
       
       <ul>
@@ -600,7 +595,7 @@ function App(){
 <View style={styles.food_toipic}>
 
     <View style={styles.photo}> 
-    <Image style={styles.image_one} source={require("./assets/noodles/shavarma.jpg")}></Image>
+    <Image style={styles.image_one} source={require("./../../assets/noodles/shavarma.jpg")}></Image>
      
       <View style={styles.food_details}>
       <ul>
@@ -630,7 +625,7 @@ function App(){
 
     <View style={styles.photo}> 
 
-    <Image style={styles.image_one} source={require("./assets/noodles/potato.jpg")}></Image>
+    <Image style={styles.image_one} source={require("./../../assets/noodles/potato.jpg")}></Image>
       <View style={styles.food_details}>
       <ul>
               <li><b>Name:Potato chips</b></li>
@@ -659,7 +654,7 @@ function App(){
 
   <View style={styles.photo}> 
 
-      <Image style={styles.image_one} source={require("./assets/noodles/barger.jpg")}></Image>
+      <Image style={styles.image_one} source={require("./../../assets/noodles/barger.jpg")}></Image>
       <View style={styles.food_details}>
       
       <ul>
@@ -697,7 +692,7 @@ function App(){
 
 }
 
-export default App;
+export default Food_store;
 
 
 const styles = StyleSheet.create({
@@ -720,10 +715,31 @@ const styles = StyleSheet.create({
     
   },
 
-  one_box: {
+  topics: {
+    width: "100%",
+    height: "5%",
+    backgroundColor: "yellow",
+    marginLeft: "10%",
+    display: "flex",
+    flexFlow: "row",
+
+   },
+
+
+  first_topics: {
+    width: "10%",
+    height: "10%",
+    backgroundColor: "pink",
+    marginLeft: "2%",
+    marginTop: "2%",
+
+
+   },
+
+  /*one_box: {
 
     width: "32%",
-    height: "85%",
+    height: "90%",
     backgroundColor: "white",
     marginTop: "1%",
     marginLeft: "1%",
@@ -732,7 +748,7 @@ const styles = StyleSheet.create({
     borderColor: "grey",
     
   },
-  
+  */
 
   photo: {
 
@@ -756,7 +772,7 @@ const styles = StyleSheet.create({
 
    food_details: {
 
-      width: "90%",
+      width: "95%",
       height: "35%",
       
       backgroundColor: "#0099CC",
@@ -777,6 +793,8 @@ const styles = StyleSheet.create({
 
   },
 
+  
+
   TextInput: {
     height: 20,
     width: "35%",
@@ -786,82 +804,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
   },
-  
-  });
-
-  
-*/
-/*
-import React from 'react';
-import 'react-native-gesture-handler';
-import { createStackNavigator } from 'react-navigation-stack';
-
-
-
-import Home from './component/js/home';
-import Food_store from './component/js/food_store';
-
-//import {createStackNavigator } from 'react-navigation';
-
-
-
-const RootStack = createStackNavigator({
-
-  Home:Home,
-  Food_store:Food_store,
-
-})
-
-
-export default class App extends React.Component{
-  render(){
-
-      return <RootStack/>
-  }
-
-}
-
-*/
-
-/*
-import React, {Component} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-//import { createStackNavigator } from 'react-navigation';
-//import { createStackNavigator } from 'react-navigation-stack';
-
-import {
-  createStackNavigator,
-  createAppContainer
-} from 'react-navigation-stack';
-
-import Home from './component/js/home';
-import Food_store from './component/js/food_store';
-
-
-const RootStack = createStackNavigator({
-  Home: {
-    screen: Home
-  },
-  Signup: {
-    screen: Food_store
-  }
-});
-
-  const App = createAppContainer(RootStack);
-
-  export default App;
-
-  */
 
  
-  import React, { Component } from 'react';
-  import Container from './ScreenContainer';
-
-  export default class  App extends Component{
-  render() {
-    return (
-      <Container />
-    );
-  }
-}
-
+  
+  });
