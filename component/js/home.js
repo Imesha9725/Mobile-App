@@ -106,8 +106,6 @@ function Home({navigation}){
         </View>
 
 
-
-
   </View>
       <View style={styles.hed}><h1>Online Restaurant...... Now You can Order..... Join with Us!</h1></View>
      
@@ -138,8 +136,7 @@ function Home({navigation}){
 
       </View>
 
-   
-
+  
     </View>
 
     );
