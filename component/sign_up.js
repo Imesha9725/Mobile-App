@@ -107,7 +107,7 @@ import {
       
             onPress={
 
-                () => navigation.navigate('Home')
+                () => navigation.navigate('Login')
             }>
             <Text style={styles.loginText}>SignUp</Text>
    

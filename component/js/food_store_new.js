@@ -79,9 +79,9 @@ function Food_store_new({navigation}){
        
        onPress={
 
-           () => navigation.navigate('Signup')
+           () => navigation.navigate('Food_store_new')
        }>
-            <Text style={styles.loginText}><h3>SignUp</h3></Text>
+            <Text style={styles.loginText}><h3>Go to profile</h3></Text>
         </TouchableOpacity>
 
         </View>
@@ -92,9 +92,9 @@ function Food_store_new({navigation}){
        
        onPress={
 
-           () => navigation.navigate('Login')
+           () => navigation.navigate('Home')
        }>
-            <Text style={styles.loginText}><h3>Login</h3></Text>
+            <Text style={styles.loginText}><h3>Logout</h3></Text>
         </TouchableOpacity>
 
         </View>

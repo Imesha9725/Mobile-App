@@ -3,6 +3,7 @@ import {createAppContainer} from 'react-navigation'
 import {createStackNavigator} from 'react-navigation-stack'
 import Home from './component/js/home';
 import Food_store from './component/js/food_store';
+import Food_store_new from './component/js/food_store_new';
 import Login from './component/login';
 import Contact_us from './component/js/contact_us';
 import About_us from './component/js/about_us';
@@ -31,6 +32,11 @@ const NavigationStack = createStackNavigator({
 
     Signup: {
         screen: Signup,
+
+    },
+
+    Food_store_new: {
+        screen: Food_store_new,
 
     },
 

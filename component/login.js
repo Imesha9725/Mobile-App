@@ -55,7 +55,7 @@ function Login({navigation}) {
        
             onPress={
 
-                () => navigation.navigate('Food_store')
+                () => navigation.navigate('Food_store_new')
             }>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
