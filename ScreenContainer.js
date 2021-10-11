@@ -9,6 +9,7 @@ import Contact_us from './component/js/contact_us';
 import About_us from './component/js/about_us';
 import Signup from './component/sign_up';
 import Customer_profile from './component/js/customer_profile';
+import Feedback from './component/js/feedback';
 
 const NavigationStack = createStackNavigator({
     Home: { 
@@ -44,6 +45,11 @@ const NavigationStack = createStackNavigator({
     Customer_profile: {
         screen: Customer_profile,
 
+    },
+
+    Feedback: {
+
+        screen: Feedback,
     },
 
 });

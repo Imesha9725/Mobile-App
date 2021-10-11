@@ -75,6 +75,20 @@ function Food_store_new({navigation}){
 
         </View>
 
+        
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Feedback')
+       }>
+        <Text style={styles.loginText}><h3>Feedback</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
         <View style={styles.first_topics}>
         <TouchableOpacity style={styles.loginBtn}
        
