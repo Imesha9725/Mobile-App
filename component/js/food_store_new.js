@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
 
 } from "react-native";
+import Customer_profile from "./customer_profile";
 
 
 
@@ -79,7 +80,7 @@ function Food_store_new({navigation}){
        
        onPress={
 
-           () => navigation.navigate('Food_store_new')
+           () => navigation.navigate('Customer_profile')
        }>
             <Text style={styles.loginText}><h3>Go to profile</h3></Text>
         </TouchableOpacity>

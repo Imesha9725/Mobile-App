@@ -8,6 +8,7 @@ import Login from './component/login';
 import Contact_us from './component/js/contact_us';
 import About_us from './component/js/about_us';
 import Signup from './component/sign_up';
+import Customer_profile from './component/js/customer_profile';
 
 const NavigationStack = createStackNavigator({
     Home: { 
@@ -37,6 +38,11 @@ const NavigationStack = createStackNavigator({
 
     Food_store_new: {
         screen: Food_store_new,
+
+    },
+
+    Customer_profile: {
+        screen: Customer_profile,
 
     },
 
