@@ -10,6 +10,7 @@ import About_us from './component/js/about_us';
 import Signup from './component/sign_up';
 import Customer_profile from './component/js/customer_profile';
 import Feedback from './component/js/feedback';
+import Quantity from './component/js/quantity';
 
 const NavigationStack = createStackNavigator({
     Home: { 
@@ -50,6 +51,11 @@ const NavigationStack = createStackNavigator({
     Feedback: {
 
         screen: Feedback,
+    },
+
+    Quantity: {
+
+        screen: Quantity,
     },
 
 });
