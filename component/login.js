@@ -1,5 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import Container from '../ScreenContainer';
+
 import {
   StyleSheet,
   Text,
@@ -12,7 +14,7 @@ import {
 } from "react-native";
 
 
-function Login() {
+function Login({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  
@@ -49,7 +51,12 @@ function Login() {
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
  
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity style={styles.loginBtn}
+       
+            onPress={
+
+                () => navigation.navigate('Food_store')
+            }>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>

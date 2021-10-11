@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
+import Container from '../ScreenContainer';
 import {
   StyleSheet,
   Text,
@@ -13,7 +14,7 @@ import {
 
 
  
- function Signup() {
+ function Signup({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  
@@ -23,6 +24,7 @@ import {
     <View style={styles.add_color}>
     
   </View>
+
     <View style={styles.topic} ><h1 color="red">Sign up</h1></View>
     <StatusBar style="auto" />
     <View style={styles.display1}><h3>First Name</h3></View>
@@ -100,8 +102,15 @@ import {
       />
     </View>
 
-    <TouchableOpacity style={styles.  signupBtn}>
-      <Text style={styles.loginText}>SIGN UP</Text>
+    <TouchableOpacity style={styles.  signupBtn}
+     
+      
+            onPress={
+
+                () => navigation.navigate('Home')
+            }>
+            <Text style={styles.loginText}>SignUp</Text>
+   
     </TouchableOpacity>
   </View>
   );

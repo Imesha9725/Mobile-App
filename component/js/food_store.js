@@ -21,8 +21,8 @@ function Food_store({navigation}){
         
     <View style={styles.store_home}>
 
-
-<View style={styles.topics}> 
+<View style={styles.startbox}>
+  <View style={styles.topics}> 
 
         <View style={styles.first_topics}>
          <Button
@@ -109,7 +109,7 @@ function Food_store({navigation}){
 
   </View>
 
-
+  </View>
 
     <center><h1>Order Now</h1></center>
 
@@ -715,10 +715,19 @@ const styles = StyleSheet.create({
     
   },
 
-  topics: {
+  startbox: {
     width: "100%",
     height: "5%",
-    backgroundColor: "yellow",
+    backgroundColor: "#0099CC",
+   
+    
+
+  },
+
+  topics: {
+    width: "95%",
+    height: "5%",
+    //backgroundColor: "yellow",
     marginLeft: "10%",
     display: "flex",
     flexFlow: "row",
@@ -729,7 +738,7 @@ const styles = StyleSheet.create({
   first_topics: {
     width: "10%",
     height: "10%",
-    backgroundColor: "pink",
+    //backgroundColor: "pink",
     marginLeft: "2%",
     marginTop: "2%",
 
