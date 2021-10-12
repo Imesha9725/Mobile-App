@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {createAppContainer} from 'react-navigation'
 import {createStackNavigator} from 'react-navigation-stack'
 import Home from './component/js/home';
@@ -11,6 +12,7 @@ import Signup from './component/sign_up';
 import Customer_profile from './component/js/customer_profile';
 import Feedback from './component/js/feedback';
 import Quantity from './component/js/quantity';
+
 
 const NavigationStack = createStackNavigator({
     Home: { 
@@ -63,3 +65,23 @@ const NavigationStack = createStackNavigator({
 const Container = createAppContainer(NavigationStack);
 
 export default Container; 
+
+/*
+import * as firebase from 'firebase';
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBDg2WwG0sBWHKLLX1vQiELFR3B-0sYrUA",
+    authDomain: "onlinerestaurant-9cf41.firebaseapp.com",
+    projectId: "onlinerestaurant-9cf41",
+    storageBucket: "onlinerestaurant-9cf41.appspot.com",
+    messagingSenderId: "1098420949805",
+    appId: "1:1098420949805:web:251691400d9650e01039a4",
+    measurementId: "G-8KPBY7Z6T1"
+  };
+  
+  if(firebase.apps.length === 0){
+
+    firebase.initializeApp(firebaseConfig)
+  }
+
+*/

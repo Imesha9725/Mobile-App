@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../ScreenContainer';
+//import firebase from '../db';
+
 import {
   StyleSheet,
   Text,
@@ -13,7 +15,6 @@ import {
 } from "react-native";
 
 
- 
  function Signup({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
