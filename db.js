@@ -16,12 +16,29 @@ const firebaseConfig = {
 };
 
 
-if(firebase.apps.length === 0){
+firebase.initializeApp(firebaseConfig);
 
-  firebase.initializeApp(firebaseConfig)
-}
+const db = firebase.firestore()
 
-export { firebase };
+export default{
+
+  firebase,
+  db,
+  
+};
+
+
+// if(firebase.apps.length === 0){
+
+//   firebase.initializeApp(firebaseConfig)
+// }
+
+// export { firebase };
+
+
+
+
+
 
 /*
 

@@ -28,6 +28,24 @@ function Feedback({navigation}) {
   const handleChangeText = (feed, value) => {
 
       setState({...state, [feed]: value});
+  };
+
+  const giveFeedback = async () => {
+
+      if(state.feed == ''){
+
+        alert('Please enter feedback')
+      } else {
+
+        await firebase.db.collection('feedback').add({
+
+            feed: state.feed
+
+        })
+
+        alert('insert successful')
+      }
+
   }
  
   return (
@@ -52,7 +70,7 @@ function Feedback({navigation}) {
        <Button title="submit"
             onPress={
 
-                () => console.log(state)
+                () => giveFeedback()
             }
             >
             </Button>
