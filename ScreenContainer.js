@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import {createAppContainer} from 'react-navigation'
 import {createStackNavigator} from 'react-navigation-stack'
+
+
 import Home from './component/js/home';
 import Food_store from './component/js/food_store';
 import Food_store_new from './component/js/food_store_new';

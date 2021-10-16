@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from '../../ScreenContainer';
+import  firebase from '../../db';
+//import { ListItem, Avatar} from 'react-navtive-elements';
 
 import {
   StyleSheet,
@@ -12,42 +14,80 @@ import {
   TouchableOpacity,
 
 } from "react-native";
+import { createStackNavigator } from "react-navigation-stack";
 
 
 function Mycart({navigation}) {
+
+  const [cart, setCart] = useState([]);
+
+  useEffect( () => {
+
+      firebase.db.collection('cart').onSnapshot(querySnapshot => {
+        const cart= [];
+
+        querySnapshot.docs.forEach(doc => {
+
+          const {id, quantity, food_id} =doc.data()
+          cart.push({
+            id: doc.id,
+            id,
+            quantity,
+            food_id
+          })
+      });
+      setCart(cart)
+
+    });
+  }, [])
 
     return(
 
             <View style={styles.cart}>
 
                 <center> <h1>My cart</h1> </center>
+               
+              <View style={styles.qua}>
+                {
+
+cart.map(cart => {
+
+  return(
 
                 <View style={styles.photo}> 
 
     <Image style={styles.image_one} source={require("./../../assets/noodles/koththu.jpg")}></Image>
+
+    
+
+
       <View style={styles.food_details}>
       <ul>
               <li><b>Name:Chiken koththu</b></li>
               <li><b>Price: Rs.500.00</b></li>
               <li><b>FoodCount:</b> <TextInput
                 style={styles.TextInput}
-                placeholder="Enter food counter"
+               
                 placeholderTextColor="#003f5c"
-               onChangeText={(email) => setEmail(email)}
+              value={cart.quantity}
             /></li>
             </ul>
 
             <TouchableOpacity style={styles.  buy_button}>
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
-              </TouchableOpacity>
-
-              
+              </TouchableOpacity>         
       </View>
+
+    
+ 
 
   </View>
 
+)
+})
+}
 
-
+</View>
             </View>
 
     );
@@ -64,16 +104,28 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
         backgroundColor: "#d3d3d3",
+        // display: "flex",
+        // flexFlow: "row",
     },
+
+    qua: {
+
+      width: "100%",
+      height: "85%",
+      //backgroundColor: "yellow",
+      display: "flex",
+      flexFlow: "row",
+  },
 
     photo: {
 
         width:"23%",
-        height: "70%",
+        height: "80%",
         backgroundColor: "#0099CC",
         marginLeft: "3.5%",
         borderRadius: 20,
     
+
       },
     
        image_one: {
@@ -82,7 +134,7 @@ const styles = StyleSheet.create({
         height: "45%",
         borderRadius: 20,
         marginLeft: "12%",
-        marginTop: "2%",
+        marginTop: "5%",
     
        },
     

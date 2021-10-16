@@ -19,7 +19,7 @@ import {
 } from "react-native";
 
 
-function Quantity({navigation}) {
+function Quantity({props}) {
  
   const [state, setState] = useState({
 
