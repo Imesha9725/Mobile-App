@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 import {createAppContainer} from 'react-navigation'
 import {createStackNavigator} from 'react-navigation-stack'
 import Home from './component/js/home';
@@ -12,7 +13,9 @@ import Signup from './component/sign_up';
 import Customer_profile from './component/js/customer_profile';
 import Feedback from './component/js/feedback';
 import Quantity from './component/js/quantity';
-
+import Mycart from './component/js/mycart';
+import Edit_profile from './component/js/edit_profile';
+import Erro_message from './component/js/error_message';
 
 const NavigationStack = createStackNavigator({
     Home: { 
@@ -58,6 +61,23 @@ const NavigationStack = createStackNavigator({
     Quantity: {
 
         screen: Quantity,
+    },
+
+    Mycart: {
+
+        screen: Mycart,
+
+    },
+
+    Edit_profile: {
+
+        screen: Edit_profile,
+    },
+
+    Erro_message: {
+
+        screen: Erro_message,
+
     },
 
 });

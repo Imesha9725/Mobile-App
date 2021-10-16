@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../ScreenContainer';
+import  firebase from '../db';
+
 
 import {
   StyleSheet,
@@ -19,6 +21,8 @@ function Login({navigation}) {
   const [password, setPassword] = useState("");
  
   return (
+
+    <View style={styles.special}>
     <View style={styles.container}>
        
       <Image style={styles.image} source={require("./../assets/blue.jpg")} />
@@ -60,12 +64,21 @@ function Login({navigation}) {
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
+    </View>
   );
 }
 
 export default Login;
  
 const styles = StyleSheet.create({
+
+  special: {
+
+    width: "100%",
+    height: "100%",
+    backgroundColor: "white",
+  },
+
   container: {
     flex: 1,
     backgroundColor: "#d3d3d3",

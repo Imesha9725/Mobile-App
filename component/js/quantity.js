@@ -1,6 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../../ScreenContainer';
+import  firebase from '../../db';
+
+// import firebase from '../../db';
+
+
 
 import {
   StyleSheet,

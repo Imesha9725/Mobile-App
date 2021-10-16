@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import Container from '../ScreenContainer';
-import  firebase from '../db';
+import Container from '../../ScreenContainer';
+//import  firebase from '../db';
 
 
 import {
@@ -16,7 +16,7 @@ import {
 } from "react-native";
 
 
- function Signup({navigation}) {
+ function Edit_profile({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  
@@ -28,24 +28,23 @@ import {
     
   </View>
 
-    <View style={styles.topic} ><h1 color="red">Sign up</h1></View>
+    <View style={styles.topic} ><h1 color="red">You can edit your profile details</h1></View>
     <StatusBar style="auto" />
     <View style={styles.display1}><h3>First Name</h3></View>
     <View style={styles.inputView}>
       <TextInput
         style={styles.TextInput}
-        placeholder="Enter your first name"
+        placeholder=""
         placeholderTextColor="#003f5c"
         onChangeText={(email) => setEmail(email)}
       />
     </View>
 
-
     <View style={styles.display1}><h3>Last Name</h3></View>
     <View style={styles.inputView}>
       <TextInput
         style={styles.TextInput}
-        placeholder="Enter your last name"
+        placeholder=""
         placeholderTextColor="#003f5c"
         onChangeText={(email) => setEmail(email)}
       />
@@ -55,7 +54,7 @@ import {
     <View style={styles.inputView}>
       <TextInput
         style={styles.TextInput}
-        placeholder="Enter your email address"
+        placeholder=""
         placeholderTextColor="#003f5c"
         onChangeText={(email) => setEmail(email)}
       />
@@ -65,45 +64,12 @@ import {
     <View style={styles.inputView}>
       <TextInput
         style={styles.TextInput}
-        placeholder="Enter your address"
+        placeholder=""
         placeholderTextColor="#003f5c"
         onChangeText={(email) => setEmail(email)}
       />
     </View>
 
-
-    <View style={styles.display1}><h3>User name</h3></View>
-
-
-    <View style={styles.inputView}>
-      <TextInput
-        style={styles.TextInput}
-        placeholder="Enter your User name"
-        placeholderTextColor="#003f5c"
-        secureTextEntry={true}
-        onChangeText={(password) => setPassword(password)}
-      />
-    </View>
-
-    <View style={styles.display1}><h3>Password</h3></View>
-    <View style={styles.inputView}>
-      <TextInput
-        style={styles.TextInput}
-        placeholder="Enter you password"
-        placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
-      />
-    </View>
-
-    <View style={styles.display1}><h3>Comfirm password</h3></View>
-    <View style={styles.inputView}>
-      <TextInput
-        style={styles.TextInput}
-        placeholder="Enter your password again"
-        placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
-      />
-    </View>
 
     <TouchableOpacity style={styles.  signupBtn}
      
@@ -121,7 +87,7 @@ import {
   );
 }
  
-export default Signup;
+export default Edit_profile;
 
  
 const styles = StyleSheet.create({

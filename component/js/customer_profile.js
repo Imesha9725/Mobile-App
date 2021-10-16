@@ -125,6 +125,46 @@ function Customer_profile({navigation}){
 
                 <View style={styles.dashboard}>
 
+                <Image style={styles.image_new} source={require("./../../assets/noodles/profile.png")}></Image>
+
+
+                  <br></br>
+
+  <center>             
+                
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Edit_profile')
+       }>
+            <Text style={styles.loginText}><h3>Edit profile</h3></Text>
+        </TouchableOpacity>
+
+
+
+
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Mycart')
+       }>
+            <Text style={styles.loginText}><h3>My Cart</h3></Text>
+        </TouchableOpacity>
+
+
+
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Food_store_new')
+       }>
+            <Text style={styles.loginText}><h3>View foods</h3></Text>
+        </TouchableOpacity>
+
+</center>
 
                 </View>
 
@@ -264,5 +304,17 @@ food_toipic: {
     borderRadius: 15,
 
   },
+
+
+  image_new: {
+  
+    marginLeft: "15%",
+    marginTop: "5%",
+    width: "230px",
+    height: "230px",
+    borderRadius: 10,
+
+  },
+
 
 });

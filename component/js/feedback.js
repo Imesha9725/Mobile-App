@@ -1,6 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../../ScreenContainer';
+import  firebase from '../../db';
+
 
 import {
   StyleSheet,
@@ -15,8 +17,18 @@ import {
 
 
 function Feedback({navigation}) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+
+  const [state, setState] = useState({
+
+      feed: "",
+  });
+
+  const handleChangeText = (feed, value) => {
+
+      setState({...state, [feed]: value});
+  }
  
   return (
     <View style={styles.container}>
@@ -30,18 +42,21 @@ function Feedback({navigation}) {
           style={styles.TextInput}
           placeholder="Enter your feedback"
           placeholderTextColor="#003f5c"
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={(value) => handleChangeText('feed',value)}
         />
       </View>
 
 <br></br>
-      <TouchableOpacity style={styles.loginBtn}
-       
+
+      <TouchableOpacity style={styles.loginBtn}>
+       <Button title="submit"
             onPress={
 
-                () => navigation.navigate('Food_store_new')
-            }>
-        <Text style={styles.loginText}>Submit</Text>
+                () => console.log(state)
+            }
+            >
+            </Button>
+        {/* <Text style={styles.loginText}>Submit</Text> */}
       </TouchableOpacity>
     </View>
   );

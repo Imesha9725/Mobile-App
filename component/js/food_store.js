@@ -126,11 +126,19 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}   onPress={
+
+                () => navigation.navigate('Erro_message')
+            }>
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
          
@@ -154,11 +162,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -182,11 +200,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -217,11 +245,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -245,11 +283,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -273,11 +321,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
               
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -313,11 +371,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -342,11 +410,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -372,11 +450,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -410,11 +498,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -439,11 +537,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -469,11 +577,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -508,11 +626,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -536,11 +664,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -566,11 +704,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -604,11 +752,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -633,11 +791,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
@@ -663,11 +831,21 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}
+              onPress={
+
+                () => navigation.navigate('Erro_message')
+            }
+            >
               <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.  buy_button}>
+              <TouchableOpacity style={styles.  buy_button}
+                onPress={
+
+                  () => navigation.navigate('Erro_message')
+              }
+              >
               <Text style={styles.loginText}><b>ADD TO CART</b></Text>
               </TouchableOpacity>
 
