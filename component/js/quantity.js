@@ -19,7 +19,7 @@ import {
 } from "react-native";
 
 
-function Quantity({props}) {
+function Quantity({navigation}) {
  
   const [state, setState] = useState({
 
@@ -54,9 +54,110 @@ const giveQuantity = async () => {
 }
 
   return (
-    <View style={styles.container}>
+
+    <View style={styles.main}>
+    
+
+<View style={styles.startbox}>
+  <View style={styles.topics}> 
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
        
-      
+            onPress={
+
+                () => navigation.navigate('Home')
+            }>
+        <Text style={styles.loginText}><h3>Home</h3></Text>
+      </TouchableOpacity>
+
+        </View>
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Food_store_new')
+       }>
+            <Text style={styles.loginText}><h3>Food store</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('About_us')
+       }>
+        <Text style={styles.loginText}><h3>About us</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Contact_us')
+       }>
+        <Text style={styles.loginText}><h3>Contact us</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+        
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Feedback')
+       }>
+        <Text style={styles.loginText}><h3>Feedback</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Customer_profile')
+       }>
+            <Text style={styles.loginText}><h3>Go to profile</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Home')
+       }>
+            <Text style={styles.loginText}><h3>Logout</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+
+
+
+  </View>
+
+  </View>
+       
+  <View style={styles.container}>
       <View style={styles.topicnew}> <h1>Please add hope to buy quantity of this foods</h1></View>
       <StatusBar style="auto" />
       <View style={styles.display}><h3>Quantity</h3></View>
@@ -88,7 +189,7 @@ const giveQuantity = async () => {
     
 
 <br></br>
-<TouchableOpacity style={styles.loginBtn}>
+<TouchableOpacity style={styles.loginBtn_new}>
        <Button title="submit"
             onPress={
 
@@ -99,12 +200,21 @@ const giveQuantity = async () => {
         {/* <Text style={styles.loginText}>Submit</Text> */}
       </TouchableOpacity>
     </View>
+
+    </View>
   );
 }
 
 export default Quantity;
  
 const styles = StyleSheet.create({
+
+  main: {
+
+    width: "100%",
+    height: "100%",
+  },
+
   container: {
     flex: 1,
     backgroundColor: "#d3d3d3",
@@ -154,7 +264,7 @@ const styles = StyleSheet.create({
   },
 
  
-  loginBtn: {
+  loginBtn_new: {
     width: "75%",
     borderRadius: 20,
     height: 50,
@@ -177,5 +287,45 @@ const styles = StyleSheet.create({
     
 
   },
+
+  food_toipic: {
+
+    width: "100%",
+    height: "28%",
+    //backgroundColor: "green",
+    display: "flex",
+    flexFlow: "row",
+    
+  },
+
+  startbox: {
+    width: "100%",
+    height: "15%",
+    backgroundColor: "#0099CC",
+   
+    
+
+  },
+
+  topics: {
+    width: "95%",
+    height: "5%",
+    //backgroundColor: "yellow",
+    marginLeft: "10%",
+    display: "flex",
+    flexFlow: "row",
+
+   },
+
+
+  first_topics: {
+    width: "10%",
+    height: "10%",
+    //backgroundColor: "pink",
+    marginLeft: "2%",
+    marginTop: "2%",
+
+
+   },
 
 });
