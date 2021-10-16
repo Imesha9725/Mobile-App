@@ -44,6 +44,104 @@ function Mycart({navigation}) {
     return(
 
             <View style={styles.cart}>
+              <View style={styles.startbox}>
+      <View style={styles.topics}> 
+    
+            <View style={styles.first_topics}>
+            <TouchableOpacity style={styles.loginBtn}
+           
+                onPress={
+    
+                    () => navigation.navigate('Home')
+                }>
+            <Text style={styles.loginText}><h3>Home</h3></Text>
+          </TouchableOpacity>
+    
+            </View>
+    
+            <View style={styles.first_topics}>
+            <TouchableOpacity style={styles.loginBtn}
+           
+           onPress={
+    
+               () => navigation.navigate('Food_store_new')
+           }>
+                <Text style={styles.loginText}><h3>Food store</h3></Text>
+            </TouchableOpacity>
+    
+            </View>
+    
+    
+            <View style={styles.first_topics}>
+            <TouchableOpacity style={styles.loginBtn}
+           
+           onPress={
+    
+               () => navigation.navigate('About_us')
+           }>
+            <Text style={styles.loginText}><h3>About us</h3></Text>
+            </TouchableOpacity>
+    
+            </View>
+    
+    
+            <View style={styles.first_topics}>
+            <TouchableOpacity style={styles.loginBtn}
+           
+           onPress={
+    
+               () => navigation.navigate('Contact_us')
+           }>
+            <Text style={styles.loginText}><h3>Contact us</h3></Text>
+            </TouchableOpacity>
+    
+            </View>
+    
+            
+    
+            <View style={styles.first_topics}>
+            <TouchableOpacity style={styles.loginBtn}
+           
+           onPress={
+    
+               () => navigation.navigate('Feedback')
+           }>
+            <Text style={styles.loginText}><h3>Feedback</h3></Text>
+            </TouchableOpacity>
+    
+            </View>
+    
+            <View style={styles.first_topics}>
+            <TouchableOpacity style={styles.loginBtn}
+           
+           onPress={
+    
+               () => navigation.navigate('Customer_profile')
+           }>
+                <Text style={styles.loginText}><h3>Go to profile</h3></Text>
+            </TouchableOpacity>
+    
+            </View>
+    
+    
+            <View style={styles.first_topics}>
+            <TouchableOpacity style={styles.loginBtn}
+           
+           onPress={
+    
+               () => navigation.navigate('Home')
+           }>
+                <Text style={styles.loginText}><h3>Logout</h3></Text>
+            </TouchableOpacity>
+    
+            </View>
+    
+    
+    
+    
+      </View>
+    
+      </View>
 
                 <center> <h1>My cart</h1> </center>
                
@@ -172,5 +270,34 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "white",
       },
-
+      startbox: {
+        width: "100%",
+        height: "15%",
+        backgroundColor: "#0099CC",
+       
+        
+    
+      },
+    
+      topics: {
+        width: "95%",
+        height: "5%",
+        //backgroundColor: "yellow",
+        marginLeft: "10%",
+        display: "flex",
+        flexFlow: "row",
+    
+       },
+    
+    
+      first_topics: {
+        width: "10%",
+        height: "10%",
+        //backgroundColor: "pink",
+        marginLeft: "2%",
+        marginTop: "2%",
+    
+    
+       },
+    
 });
