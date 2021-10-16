@@ -23,6 +23,7 @@ function Feedback({navigation}) {
   const [state, setState] = useState({
 
       feed: "",
+      id: "3",
   });
 
   const handleChangeText = (feed, value) => {
@@ -39,7 +40,8 @@ function Feedback({navigation}) {
 
         await firebase.db.collection('feedback').add({
 
-            feed: state.feed
+            feed: state.feed,
+            id: state.id,
 
         })
 
@@ -61,6 +63,14 @@ function Feedback({navigation}) {
           placeholder="Enter your feedback"
           placeholderTextColor="#003f5c"
           onChangeText={(value) => handleChangeText('feed',value)}
+        />
+      </View>
+
+      <View >
+        <TextInput
+         
+         
+          onChangeText={(value) => handleChangeText('id',value)}
         />
       </View>
 

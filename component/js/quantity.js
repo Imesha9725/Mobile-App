@@ -20,9 +20,39 @@ import {
 
 
 function Quantity({navigation}) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
  
+  const [state, setState] = useState({
+
+    quantity: "",
+    id: "3",
+    food_id: "5",
+});
+
+const handleChangeText = (quantity, value) => {
+
+    setState({...state, [quantity]: value});
+};
+
+const giveQuantity = async () => {
+
+    if(state.quantity == ''){
+
+      alert('Please enter quantity')
+    } else {
+
+      await firebase.db.collection('cart').add({
+
+          quantity: state.quantity,
+          id: state.id,
+          food_id: state.food_id
+
+      })
+
+      alert('insert successful')
+    }
+
+}
+
   return (
     <View style={styles.container}>
        
@@ -35,18 +65,38 @@ function Quantity({navigation}) {
           style={styles.TextInput}
           placeholder="Enter quantity"
           placeholderTextColor="#003f5c"
-          onChangeText={(email) => setEmail(email)}
+          onChangeText={(value) => handleChangeText('quantity',value)}
         />
       </View>
 
+      <View >
+        <TextInput
+         
+         
+          onChangeText={(value) => handleChangeText('id',value)}
+        />
+      </View>
+
+      <View >
+        <TextInput
+         
+         
+          onChangeText={(value) => handleChangeText('food_id',value)}
+        />
+      </View>
+
+    
+
 <br></br>
-      <TouchableOpacity style={styles.loginBtn}
-       
+<TouchableOpacity style={styles.loginBtn}>
+       <Button title="submit"
             onPress={
 
-                () => navigation.navigate('Food_store_new')
-            }>
-        <Text style={styles.loginText}>Submit</Text>
+                () => giveQuantity()
+            }
+            >
+            </Button>
+        {/* <Text style={styles.loginText}>Submit</Text> */}
       </TouchableOpacity>
     </View>
   );
