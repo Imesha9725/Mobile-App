@@ -39,7 +39,17 @@ function Mycart({navigation}) {
       setCart(cart)
 
     });
-  }, [])
+  }, []);
+
+  const deleteItem = async () =>{
+
+      const dbRef = db.collection('cart').delete(cart.id);
+      // await dbRef.delete();
+      navigation.navigate('Customer_profile');
+
+  };
+
+
 
     return(
 
@@ -172,9 +182,15 @@ cart.map(cart => {
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
-            <Text style={styles.loginText}><b>Delete Food Item</b></Text>
-              </TouchableOpacity>  
+             {/* <TouchableOpacity style={styles.  buy_button}> 
+          
+             <Button style={styles.buy_button} title="Delete Food Item"
+                onPress={ () => deleteItem() }
+            >
+          </Button> 
+
+              </TouchableOpacity>   */}
+
 
             <TouchableOpacity style={styles.  buy_button}>
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
@@ -214,7 +230,7 @@ const styles = StyleSheet.create({
     qua: {
 
       width: "100%",
-      height: "70%",
+      height: "60%",
       //backgroundColor: "yellow",
       display: "flex",
       flexFlow: "row",

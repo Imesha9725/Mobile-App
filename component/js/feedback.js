@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../../ScreenContainer';
 import  { auth, db } from '../../firebase';
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 import {
@@ -18,10 +19,18 @@ import {
 
 function Feedback({navigation}) {
 
+  const [getValue, setGetValue] = useState('');
+
+  AsyncStorage.getItem('userId').then(
+      (value) =>
+        setGetValue(value),
+  );
+  console.log(getValue);
+
   const [state, setState] = useState({
 
       feed: "",
-      id: "jm0JM75w42WMZhkmbuDeoe1WhAA2",
+      id: getValue,
   });
 
   const handleChangeText = (feed, value) => {
@@ -39,7 +48,8 @@ function Feedback({navigation}) {
         await db.collection('feedback').add({
 
             feed: state.feed,
-            id: state.id,
+            id:getValue,
+            // id: state.id,
 
         })
 
@@ -49,9 +59,7 @@ function Feedback({navigation}) {
       }
 
   }
-
   
- 
   return (
 
     <View style={styles.main}>
@@ -183,11 +191,7 @@ function Feedback({navigation}) {
            }
              */}
 
-        <TextInput
-         
-         
-          onChangeText={(value) => handleChangeText('id',value)}
-        />
+      
       </View>
 
 <br></br>

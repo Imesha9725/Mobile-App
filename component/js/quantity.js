@@ -2,9 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../../ScreenContainer';
 import  {auth , db} from '../../firebase';
-
-// import firebase from '../../db';
-
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 import {
@@ -20,11 +18,19 @@ import {
 
 
 function Quantity({navigation}) {
+
+  const [getValue, setGetValue] = useState('');
+
+  AsyncStorage.getItem('userId').then(
+      (value) =>
+        setGetValue(value),
+  );
+  console.log(getValue);
  
   const [state, setState] = useState({
 
     quantity: "",
-    id: "jm0JM75w42WMZhkmbuDeoe1WhAA2",
+    id: getValue,
     food_id: "5",
 });
 
@@ -43,7 +49,7 @@ const giveQuantity = async () => {
       await db.collection('cart').add({
 
           quantity: state.quantity,
-          id: state.id,
+          id: getValue,
           food_id: state.food_id
 
       })
@@ -190,15 +196,12 @@ const giveQuantity = async () => {
     
 
 <br></br>
-<TouchableOpacity style={styles.loginBtn_new}>
-       <Button title="submit"
-            onPress={
+<TouchableOpacity style={styles.loginBtn_new} onPress={
 
-                () => giveQuantity()
-            }
-            >
-            </Button>
-        {/* <Text style={styles.loginText}>Submit</Text> */}
+    () => giveQuantity() }>
+
+      
+        <Text style={styles.loginText}>Submit</Text> 
       </TouchableOpacity>
     </View>
 

@@ -23,7 +23,7 @@ import {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
+  //const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const register = () => {
@@ -38,7 +38,7 @@ import {
           displayName: fname
         }).then( () => {
 
-            Alert.alert('Registerd Succesfully');
+            alert('Registerd Succesfully');
             navigation.navigate('Login');
 
         }).catch(function (error){
@@ -191,7 +191,7 @@ import {
     </View>
 
 
-    <View style={styles.display1}><h3>User name</h3></View>
+    {/* <View style={styles.display1}><h3>User name</h3></View>
 
 
     <View style={styles.inputView}>
@@ -202,7 +202,7 @@ import {
         value={username}
         onChangeText={text => setUsername(text)}
       />
-    </View>
+    </View> */}
 
     <View style={styles.display1}><h3>Password</h3></View>
     <View style={styles.inputView}>
@@ -218,13 +218,9 @@ import {
 
   
 
-    <TouchableOpacity style={styles.  signupBtn_new}>
-     
-        <Button title="Sign up"
-            onPress={register }
-            >
-  </Button>
-          
+    <TouchableOpacity style={styles.  signupBtn_new}  onPress={register }>
+    
+  <Text style={styles.loginText}>Login</Text>  
    
     </TouchableOpacity>
   </View>

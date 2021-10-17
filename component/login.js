@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useState , useEffect } from "react";
 import Container from '../ScreenContainer';
 import { auth } from '../firebase';
+import AsyncStorage from '@react-native-community/async-storage';
 
 import {
   StyleSheet,
@@ -21,6 +22,7 @@ function Login({navigation}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  
 
   const login = () => {
 
@@ -29,7 +31,8 @@ function Login({navigation}) {
     .then((userCredential) => {
         // Signed in
         var user = userCredential.user;
-        console.log(user);
+        AsyncStorage.setItem('userId', user.uid);
+        console.log(user.uid);
         navigation.replace('Food_store_new')
         alert("Login Succesfully")
         // ...
@@ -41,6 +44,9 @@ function Login({navigation}) {
 });
 
 };
+
+
+
  
   return (
 
@@ -50,7 +56,7 @@ function Login({navigation}) {
       <Image style={styles.image} source={require("./../assets/blue.jpg")} />
       <View style={styles.topicnew}> <h1>Login</h1></View>
       <StatusBar style="auto" />
-      <View style={styles.display}><h3>User name</h3></View>
+      <View style={styles.display}><h3>Email Address</h3></View>
       <View style={styles.inputView_new}>
         <TextInput
           style={styles.TextInput}
@@ -82,13 +88,10 @@ function Login({navigation}) {
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
  
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity style={styles.loginBtn} onPress={login}>
        
-      <Button title="Sign up"
-            onPress={login}
-            >
-  </Button>
-
+      
+        <Text style={styles.loginText}>Login</Text>
       </TouchableOpacity>
     </View>
     </View>
