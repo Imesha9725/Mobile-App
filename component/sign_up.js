@@ -13,6 +13,7 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  Alert,
 
 } from "react-native";
 
@@ -35,8 +36,10 @@ import {
         user.updateProfile({
 
           displayName: fname
-        }).then(function () {
+        }).then( () => {
 
+            Alert.alert('Registerd Succesfully');
+            navigation.navigate('Login');
 
         }).catch(function (error){
 
@@ -258,7 +261,7 @@ const styles = StyleSheet.create({
   },
 
   add_color: {
-    
+
 
     width: "100%",
     height: "5%",

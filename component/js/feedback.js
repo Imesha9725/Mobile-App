@@ -23,7 +23,7 @@ function Feedback({navigation}) {
   const [state, setState] = useState({
 
       feed: "",
-      id: "3",
+      id: "jm0JM75w42WMZhkmbuDeoe1WhAA2",
   });
 
   const handleChangeText = (feed, value) => {
