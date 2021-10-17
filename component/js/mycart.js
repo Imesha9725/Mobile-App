@@ -162,6 +162,7 @@ cart.map(cart => {
       <View style={styles.food_details}>
       <ul>
               <li><b>Name:Chiken koththu</b></li>
+              {/* <li><b>{cart.id}</b></li> */}
               <li><b>Price: Rs.500.00</b></li>
               <li><b>FoodCount:</b> <TextInput
                 style={styles.TextInput}
@@ -170,6 +171,10 @@ cart.map(cart => {
               value={cart.quantity}
             /></li>
             </ul>
+
+            <TouchableOpacity style={styles.  buy_button}>
+            <Text style={styles.loginText}><b>Delete Food Item</b></Text>
+              </TouchableOpacity>  
 
             <TouchableOpacity style={styles.  buy_button}>
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
@@ -200,7 +205,7 @@ const styles = StyleSheet.create({
     cart: {
 
         width: "100%",
-        height: "100%",
+        height: "120%",
         backgroundColor: "#d3d3d3",
         // display: "flex",
         // flexFlow: "row",
@@ -209,7 +214,7 @@ const styles = StyleSheet.create({
     qua: {
 
       width: "100%",
-      height: "85%",
+      height: "70%",
       //backgroundColor: "yellow",
       display: "flex",
       flexFlow: "row",
@@ -218,7 +223,7 @@ const styles = StyleSheet.create({
     photo: {
 
         width:"23%",
-        height: "80%",
+        height: "90%",
         backgroundColor: "#0099CC",
         marginLeft: "3.5%",
         borderRadius: 20,
