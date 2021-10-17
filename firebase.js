@@ -2,6 +2,7 @@
 
 import firebase from "firebase";
 import "firebase/firestore";
+import 'firebase/auth';
 
 const firebaseConfig = {
    
@@ -16,14 +17,26 @@ const firebaseConfig = {
 };
 
 
-firebase.initializeApp(firebaseConfig);
 
-const db = firebase.firestore()
 
-export default{
+let app;
+if(firebase.apps.length === 0 ){
 
-  firebase,
+    app =firebase.initializeApp(firebaseConfig);
+
+} else{
+
+  app = firebase.app();
+}
+
+
+const db = app.firestore();
+const auth = firebase.auth();
+
+export{
+
   db,
+  auth,
   
 };
 
@@ -34,7 +47,6 @@ export default{
 // }
 
 // export { firebase };
-
 
 
 

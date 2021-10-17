@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../ScreenContainer';
-import  firebase from '../db';
+//import  firebase from '../db';
+import { auth } from '../firebase';
 
 
 import {
@@ -17,13 +18,132 @@ import {
 
 
  function Signup({navigation}) {
+
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  const register = () => {
+
+        auth.createUserWithEmailAndPassword( email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+
+        user.updateProfile({
+
+          displayName: fname
+        }).then(function () {
+
+
+        }).catch(function (error){
+
+
+        });
+        // ...
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage)
+        // ..
+      });
+
+  };
  
   return (
     <View style={styles.backbox}>
+
+<View style={styles.startbox}>
+  <View style={styles.topics}> 
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+            onPress={
+
+                () => navigation.navigate('Home')
+            }>
+        <Text style={styles.loginText}><h3>Home</h3></Text>
+      </TouchableOpacity>
+
+        </View>
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Food_store_new')
+       }>
+            <Text style={styles.loginText}><h3>Food store</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('About_us')
+       }>
+        <Text style={styles.loginText}><h3>About us</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Contact_us')
+       }>
+        <Text style={styles.loginText}><h3>Contact us</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Signup')
+       }>
+            <Text style={styles.loginText}><h3>SignUp</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+
+        <View style={styles.first_topics}>
+        <TouchableOpacity style={styles.loginBtn}
+       
+       onPress={
+
+           () => navigation.navigate('Login')
+       }>
+            <Text style={styles.loginText}><h3>Login</h3></Text>
+        </TouchableOpacity>
+
+        </View>
+
+
+
+
+  </View>
+
+  </View>
+
+
     <View style={styles.signup}>
-    <br></br>
+  
     <View style={styles.add_color}>
     
   </View>
@@ -36,7 +156,8 @@ import {
         style={styles.TextInput}
         placeholder="Enter your first name"
         placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
+        value={fname}
+        onChangeText={text => setFname(text)}
       />
     </View>
 
@@ -47,27 +168,22 @@ import {
         style={styles.TextInput}
         placeholder="Enter your last name"
         placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
+        value={lname}
+        onChangeText={text => setLname(text)}
       />
     </View>
 
-     <View style={styles.display1}><h3>Contact Number</h3></View>
-    <View style={styles.inputView}>
-      <TextInput
-        style={styles.TextInput}
-        placeholder="Enter your email address"
-        placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
-      />
-    </View>
+   
+  
 
-    <View style={styles.display1}><h3>Address</h3></View>
+    <View style={styles.display1}><h3>Email Address</h3></View>
     <View style={styles.inputView}>
       <TextInput
         style={styles.TextInput}
         placeholder="Enter your address"
         placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
+        value={email}
+        onChangeText={text => setEmail(text)}
       />
     </View>
 
@@ -80,8 +196,8 @@ import {
         style={styles.TextInput}
         placeholder="Enter your User name"
         placeholderTextColor="#003f5c"
-        secureTextEntry={true}
-        onChangeText={(password) => setPassword(password)}
+        value={username}
+        onChangeText={text => setUsername(text)}
       />
     </View>
 
@@ -91,28 +207,21 @@ import {
         style={styles.TextInput}
         placeholder="Enter you password"
         placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
+       value={password}
+        onChangeText={(text) => setPassword(text)}
+        secureTextEntry
       />
     </View>
 
-    <View style={styles.display1}><h3>Comfirm password</h3></View>
-    <View style={styles.inputView}>
-      <TextInput
-        style={styles.TextInput}
-        placeholder="Enter your password again"
-        placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
-      />
-    </View>
+  
 
-    <TouchableOpacity style={styles.  signupBtn}
+    <TouchableOpacity style={styles.  signupBtn_new}>
      
-      
-            onPress={
-
-                () => navigation.navigate('Login')
-            }>
-            <Text style={styles.loginText}>SignUp</Text>
+        <Button title="Sign up"
+            onPress={register }
+            >
+  </Button>
+          
    
     </TouchableOpacity>
   </View>
@@ -129,7 +238,7 @@ const styles = StyleSheet.create({
   backbox: {
 
     width: "100%",
-    height: "100%",
+    height: "110%",
     backgroundColor: "white",
     
   },
@@ -140,7 +249,7 @@ const styles = StyleSheet.create({
     //alignItems: "center",
     justifyContent: "center",
     width: "35%",
-    height: "80%",
+    height: "85%",
     marginLeft: "30%",
     marginTop: "2%",
     marginBottom: "2%",
@@ -149,6 +258,7 @@ const styles = StyleSheet.create({
   },
 
   add_color: {
+    
 
     width: "100%",
     height: "5%",
@@ -196,7 +306,7 @@ const styles = StyleSheet.create({
   },
   */
  
-  signupBtn: {
+  signupBtn_new: {
     width: "80%",
     borderRadius: 20,
     height: 50,
@@ -221,6 +331,37 @@ const styles = StyleSheet.create({
   
 
 },
+
+startbox: {
+  width: "100%",
+  height: "15%",
+  backgroundColor: "#0099CC",
+ 
+  
+
+},
+
+topics: {
+  width: "95%",
+  height: "5%",
+  //backgroundColor: "yellow",
+  marginLeft: "10%",
+  display: "flex",
+  flexFlow: "row",
+
+ },
+
+
+first_topics: {
+  width: "10%",
+  height: "10%",
+  //backgroundColor: "pink",
+  marginLeft: "2%",
+  marginTop: "2%",
+
+
+ },
+
 
 
 });
