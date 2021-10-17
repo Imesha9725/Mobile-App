@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../../ScreenContainer';
-import  firebase from '../../db';
+import  {auth , db} from '../../firebase';
 
 // import firebase from '../../db';
 
@@ -24,7 +24,7 @@ function Quantity({navigation}) {
   const [state, setState] = useState({
 
     quantity: "",
-    id: "3",
+    id: "jm0JM75w42WMZhkmbuDeoe1WhAA2",
     food_id: "5",
 });
 
@@ -40,7 +40,7 @@ const giveQuantity = async () => {
       alert('Please enter quantity')
     } else {
 
-      await firebase.db.collection('cart').add({
+      await db.collection('cart').add({
 
           quantity: state.quantity,
           id: state.id,
@@ -49,6 +49,7 @@ const giveQuantity = async () => {
       })
 
       alert('insert successful')
+      navigation.navigate('Customer_profile');
     }
 
 }

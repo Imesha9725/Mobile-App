@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState, useEffect } from "react";
 import Container from '../../ScreenContainer';
-import  firebase from '../../db';
+import  {auth , db} from '../../firebase';
 //import { ListItem, Avatar} from 'react-navtive-elements';
 
 import {
@@ -14,7 +14,7 @@ import {
   TouchableOpacity,
 
 } from "react-native";
-import { createStackNavigator } from "react-navigation-stack";
+
 
 
 function Mycart({navigation}) {
@@ -23,7 +23,7 @@ function Mycart({navigation}) {
 
   useEffect( () => {
 
-      firebase.db.collection('cart').onSnapshot(querySnapshot => {
+      db.collection('cart').onSnapshot(querySnapshot => {
         const cart= [];
 
         querySnapshot.docs.forEach(doc => {

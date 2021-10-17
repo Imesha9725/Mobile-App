@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../../ScreenContainer';
-import  firebase from '../../db';
+import  { auth, db } from '../../firebase';
 
 
 import {
@@ -17,8 +17,6 @@ import {
 
 
 function Feedback({navigation}) {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
 
   const [state, setState] = useState({
 
@@ -38,17 +36,21 @@ function Feedback({navigation}) {
         alert('Please enter feedback')
       } else {
 
-        await firebase.db.collection('feedback').add({
+        await db.collection('feedback').add({
 
             feed: state.feed,
             id: state.id,
 
         })
 
-        alert('insert successful')
+        alert('insert successful');
+        navigation.navigate('Food_store_new');
+
       }
 
   }
+
+  
  
   return (
 
@@ -170,6 +172,17 @@ function Feedback({navigation}) {
       </View>
 
       <View >
+
+           {/* { user={
+
+
+              _id: auth?.currentUser?.email,
+           }
+
+
+           }
+             */}
+
         <TextInput
          
          
@@ -187,7 +200,7 @@ function Feedback({navigation}) {
             }
             >
             </Button>
-        {/* <Text style={styles.loginText}>Submit</Text> */}
+        
       </TouchableOpacity>
     </View>
 
