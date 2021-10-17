@@ -1,8 +1,7 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import Container from '../ScreenContainer';
-import  firebase from '../db';
-
+import { auth } from '../firebase';
 
 import {
   StyleSheet,
@@ -12,13 +11,36 @@ import {
   TextInput,
   Button,
   TouchableOpacity,
+  Alert,
 
 } from "react-native";
 
 
 function Login({navigation}) {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+
+  const login = () => {
+
+    // firebase
+    auth.signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        console.log(user);
+        navigation.replace('Food_store_new')
+        alert("Login Succesfully")
+        // ...
+    })
+    .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        alert('Please enter correct email & password');
+});
+
+};
  
   return (
 
@@ -34,8 +56,11 @@ function Login({navigation}) {
           style={styles.TextInput}
           placeholder="Enter your user name"
           placeholderTextColor="#003f5c"
+          value={email}
           onChangeText={(email) => setEmail(email)}
         />
+
+      
       </View>
 
       <View style={styles.display}><h3>Password</h3></View>
@@ -46,22 +71,24 @@ function Login({navigation}) {
           style={styles.TextInput}
           placeholder="Enter your password"
           placeholderTextColor="#003f5c"
-          secureTextEntry={true}
+         
+          value={password}
           onChangeText={(password) => setPassword(password)}
         />
+       
       </View>
  
       <TouchableOpacity>
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
  
-      <TouchableOpacity style={styles.loginBtn}
+      <TouchableOpacity style={styles.loginBtn}>
        
-            onPress={
+      <Button title="Sign up"
+            onPress={login}
+            >
+  </Button>
 
-                () => navigation.navigate('Food_store_new')
-            }>
-        <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
     </View>
     </View>
@@ -159,78 +186,3 @@ const styles = StyleSheet.create({
 
 });
 
-
-/*
-
-//import * as firebase from 'firebase';
-
-import firebase from "firebase";
-import "firebase/firestore";
-import "firebase/auth";
-
-const firebaseConfig = {
-   
-        apiKey: "AIzaSyBDg2WwG0sBWHKLLX1vQiELFR3B-0sYrUA",
-        authDomain: "onlinerestaurant-9cf41.firebaseapp.com",
-        projectId: "onlinerestaurant-9cf41",
-        storageBucket: "onlinerestaurant-9cf41.appspot.com",
-        messagingSenderId: "1098420949805",
-        appId: "1:1098420949805:web:251691400d9650e01039a4",
-        measurementId: "G-8KPBY7Z6T1"
-     
-};
-
-let app;
-if(firebase.apps.length === 0 ){
-
-    app =firebase.initializeApp(firebaseConfig);
-
-} else{
-
-  app = firebase.app()
-}
-
-
-const db = app.firestore();
-const auth = firebase.auth();
-
-export default{
-
-  firebase,
-  db,
-  auth
-  
-};
-
-*/
-
-// if(firebase.apps.length === 0){
-
-//   firebase.initializeApp(firebaseConfig)
-// }
-
-// export { firebase };
-
-
-
-
-
-
-/*
-
-const firebaseConfig = {
-    apiKey: "AIzaSyBDg2WwG0sBWHKLLX1vQiELFR3B-0sYrUA",
-    authDomain: "onlinerestaurant-9cf41.firebaseapp.com",
-    projectId: "onlinerestaurant-9cf41",
-    storageBucket: "onlinerestaurant-9cf41.appspot.com",
-    messagingSenderId: "1098420949805",
-    appId: "1:1098420949805:web:251691400d9650e01039a4",
-    measurementId: "G-8KPBY7Z6T1"
-  };
-  
-  if(firebase.apps.length === 0){
-
-    firebase.initializeApp(firebaseConfig)
-  }
-
-  */
