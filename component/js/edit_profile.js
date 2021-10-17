@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import Container from '../../ScreenContainer';
-//import  firebase from '../db';
+
 
 
 import {
@@ -50,17 +50,7 @@ import {
       />
     </View>
 
-     <View style={styles.display1}><h3>Contact Number</h3></View>
-    <View style={styles.inputView}>
-      <TextInput
-        style={styles.TextInput}
-        placeholder=""
-        placeholderTextColor="#003f5c"
-        onChangeText={(email) => setEmail(email)}
-      />
-    </View>
-
-    <View style={styles.display1}><h3>Address</h3></View>
+    <View style={styles.display1}><h3>Email</h3></View>
     <View style={styles.inputView}>
       <TextInput
         style={styles.TextInput}

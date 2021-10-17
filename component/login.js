@@ -60,7 +60,7 @@ function Login({navigation}) {
       <View style={styles.inputView_new}>
         <TextInput
           style={styles.TextInput}
-          placeholder="Enter your user name"
+          placeholder="Enter your email address"
           placeholderTextColor="#003f5c"
           value={email}
           onChangeText={(email) => setEmail(email)}

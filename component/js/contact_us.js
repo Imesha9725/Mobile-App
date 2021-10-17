@@ -30,7 +30,7 @@ function Contact_us(){
      
    <center><p><br></br> Our team is waiting to help you!</p></center>
 
-       <br></br><br></br>
+       <br></br><br></br><br></br>
        </View>
        <View style={styles.image_box_new}>
        <Image style={styles.image_new_01} source={require("./../../assets/contact_us_02.jpg")}></Image> 

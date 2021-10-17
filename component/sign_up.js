@@ -183,7 +183,7 @@ import {
     <View style={styles.inputView}>
       <TextInput
         style={styles.TextInput}
-        placeholder="Enter your address"
+        placeholder="Enter your email address"
         placeholderTextColor="#003f5c"
         value={email}
         onChangeText={text => setEmail(text)}
