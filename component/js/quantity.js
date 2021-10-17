@@ -54,7 +54,7 @@ const giveQuantity = async () => {
 
       })
 
-      alert('insert successful')
+      alert('Quantity added successfully')
       navigation.navigate('Customer_profile');
     }
 

@@ -53,7 +53,7 @@ function Feedback({navigation}) {
 
         })
 
-        alert('insert successful');
+        alert('Feedback added successfully');
         navigation.navigate('Food_store_new');
 
       }

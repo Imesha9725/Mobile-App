@@ -18,6 +18,7 @@ import Quantity from './component/js/quantity';
 import Mycart from './component/js/mycart';
 import Edit_profile from './component/js/edit_profile';
 import Erro_message from './component/js/error_message';
+import Paymentone from './component/js/paymentone';
 
 const NavigationStack = createStackNavigator({
     Home: { 
@@ -80,6 +81,11 @@ const NavigationStack = createStackNavigator({
 
         screen: Erro_message,
 
+    },
+
+    Paymentone: {
+
+        screen: Paymentone,
     },
 
 });

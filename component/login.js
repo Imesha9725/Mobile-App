@@ -32,7 +32,7 @@ function Login({navigation}) {
         // Signed in
         var user = userCredential.user;
         AsyncStorage.setItem('userId', user.uid);
-        console.log(user.uid);
+         console.log(user.uid);
         navigation.replace('Food_store_new')
         alert("Login Succesfully")
         // ...

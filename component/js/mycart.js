@@ -178,7 +178,7 @@ cart.map(cart => {
                 style={styles.TextInput}
                
                 placeholderTextColor="#003f5c"
-              value={cart.quantity}
+              defaultvalue={cart.quantity}
             /></li>
             </ul>
 

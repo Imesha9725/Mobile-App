@@ -174,7 +174,10 @@ function Food_store_new({navigation}){
             /></li>
             </ul>
 
-            <TouchableOpacity style={styles.  buy_button}>
+            <TouchableOpacity style={styles.  buy_button}onPress={
+
+                  () => navigation.navigate('Paymentone')
+                  }>
             <Text style={styles.loginText}><b>ORDER NOW</b></Text>
               </TouchableOpacity>
 
